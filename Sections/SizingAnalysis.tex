@@ -5,24 +5,24 @@ The initial sizing analysis was conducted by examining a variety of similar airc
     \caption{Key Sizing Parameters}
     \begin{tabular}{ |c||c| }\toprule
     \textbf{Parameter} & \textbf{Value} \\\hline\hline
-    Payload & 94,000 lb  \\\hline
-    Range & 3,500 nmi \\\hline
-    Takeoff Field Length with a 35 ft obstacle & 9,000 ft  \\\hline
-    Landing Field Length & 9,000 ft \\\hline
-    Cruise Speed & 487 kts\\\hline
-    Cruise Altitude & 37,000 ft \\\hline
-    Max Takeoff Weight & 364,626 lb\\\hline 
-    L/D & 17.83\\\hline 
-    $C_{L_{max}}$ & 1.65\\\hline 
-    SFC & 0.65\\\hline 
+    Payload & 94,000 [lb]  \\\hline
+    Range & 3,500 [Nmi] \\\hline
+    Takeoff Field Length with a 35 ft obstacle & 9,000 [ft]  \\\hline
+    Landing Field Length & 9,000 [ft] \\\hline
+    Cruise Speed & 487 [kts]\\\hline
+    Cruise Altitude & 37,000 [ft] \\\hline
+    Max Takeoff Weight & 364,626 [lb]\\\hline 
+    L/D & 17.83 [$\sim$]\\\hline 
+    $C_{L_{max}}$ & 1.65 [$\sim$]\\\hline 
+    SFC & 0.65 [lb/lbf/hr]\\\hline 
 
     \end{tabular}\label{tab:req}
 \end{table}
 
-Parameters compiled from the similarity analysis were approximated by taking historic averages of those respective to the different analyzed aircraft. Preliminary cruise speed was obtained by assuming an average cruise Mach number of 0.9, while initial cruise altitude was estimated by taking averages of similar aircraft. Many other sizing parameters, specifically the wing geometries, were calculated using equations from Raymer \cite{raymer}. The wing area, however, was calculated by taking a couple averages of seed aircraft as an initial value of 4,600 ft$^2$. This value was used to determine other wing related parameters, and was fine tuned as the sizing process went along. With all estimated parameters, an iterative process was used with a sizing spreadsheet dynamically running through all of Raymer's \cite{raymer} fundamental sizing equations to converge all sizing values for the initial SAM Mark I. This step was necessary due to the significant differences in range from all contemporary widebody, 300+ capacity commercial aircraft which could have been used as a seed.
+Parameters compiled from the similarity analysis were approximated by taking historic averages of those respective to the different analyzed aircraft. Preliminary cruise speed was obtained by assuming an average cruise Mach number of 0.9, while initial cruise altitude was estimated by taking averages of similar aircraft. Many other sizing parameters, specifically the wing geometries, were calculated using equations from Raymer \cite{raymer}. The wing area, however, was calculated by taking a couple averages of seed aircraft as an initial value of 4,600 ft$^2$. This value was used to determine other wing related parameters, and was fine tuned as the sizing process went along. With all estimated parameters, an iterative process was used with a sizing spreadsheet dynamically running through all of Raymer's \cite{raymer} fundamental sizing equations to converge all sizing values for the initial SAM Mk I. This step was necessary due to the significant differences in range from all contemporary widebody, 300+ capacity commercial aircraft which could have been used as a seed.
 
 \clearpage
-The aircraft's weights were calculated using two build up methods, instead of taking the seed aircraft's weights, by utilizing equations from Raymer \cite{raymer} and Roskam parts II \cite{roskam_2} and V \cite{roskam_5} and an initial assumption of \hl{75,000 lb of fuel}. A separate first-cut trade study was also conducted to address some key sizing parameters regarding the aircraft's fuselage to make sure that the SAM Mark I featured enough room for the designed seating arrangement. The trade study is demonstrated in Table \ref{tab:trade_params}.
+The aircraft's weights were calculated using two build up methods, instead of taking the seed aircraft's weights, by utilizing equations from Raymer \cite{raymer} and Roskam parts II \cite{roskam_2} and V \cite{roskam_5} and an initial assumption of 110,000 lb of fuel. A separate first-cut trade study was also conducted to address some key sizing parameters regarding the aircraft's fuselage to make sure that the SAM Mk I featured enough room for the designed seating arrangement. The trade study is demonstrated in Table \ref{tab:trade_params}.
 
 \begin{table}[!h] 
     \centering
@@ -39,7 +39,7 @@ The aircraft's weights were calculated using two build up methods, instead of ta
 
 After analyzing multiple aircraft, a fuselage length of 210 ft was decided in order to both hold more passengers than the Boeing 777-200 and to support a 3-4-3 economy seat arrangement. After utilizing a weight build up method, a max takeoff weight of 364,626 lb was calculated, which is about 200,000 lb heavier than the main seed aircraft. Once the weights were calculated, the total drag was able to be computed at desired takeoff conditions. This in turn allowed for a computation of required takeoff thrust to be about 71,500 lbf. 
 
-
+\clearpage
 % \textcolor{red}{\begin{itemize}
 %     \item AIAA: A description or graphical representation of the aircraft sizing based on the
 % requirements and design objectives given. \hl{This should describe or represent the

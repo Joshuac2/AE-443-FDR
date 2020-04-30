@@ -1,6 +1,6 @@
 \subsection{Structures (\textit{CE})}
 \subsubsection{Material Selection (\textit{CE})}
-Modern-age aircraft exhibit many different structure layouts and material selection for each structure. The goal for the material selection is to meet the given requirements, as well as provide an aircraft which will have the best mechanical properties for the given flight missions. The different structure types are tabulated in Table \ref{tab:structure_material_table}.
+Modern-age aircraft exhibit many different structure layouts and material selection for each structure of the aircraft. The goal for the material selection for each section of the aircraft is to meet the given requirements, as well as provide an aircraft which will have the best mechanical performance for the given flight missions. The different structure types evaluated are tabulated in Table \ref{tab:structure_material_table}.
 
 \begin{table}[!h]
 \centering
@@ -10,32 +10,17 @@ Modern-age aircraft exhibit many different structure layouts and material select
 \toprule
 \multicolumn{1}{|c||}{\textbf{Build-up Type}} & \multicolumn{1}{c|}{\textbf{Description}}                                                                                                                       \\ \hline\hline
 Metal                                       & Most or all parts of the primary and secondary structure are metallic, such as aluminum, steel, and titanium alloys                                             \\ \hline
-Composite                                    & Most or all parts of the primary and secondary structure are composite, such as carbon fiber reinforced polymers (CFRP), fiber glass, or other composites \\ \hline
+Composite                                    & Most or all parts of the primary and secondary structure are composite, such as carbon fiber reinforced polymers (CFRP), fiberglass, or other composites \\ \hline
 Hybrid                                       & Depending on the structure, the material of the structure is either metal or composite                                                                            \\ \bottomrule
 \end{tabular}
 \end{table}
 % \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{1.5cm}|p{3cm}| }
 
-Metallic build-up is the more traditional method of designing aircraft structures, where most or all primary structures are composed of metal alloys. This method of construction is typically cost-effective and weight efficient for most structures, however, there are downsides such as damage tolerance and fatigue. A composite build-up requires high development costs, and relatively high manufacturing costs, but can offer incredible weight-savings compared to metal structure due to their high strength-to-weight ratio. In Figure \ref{fig:strength_density}, the ultimate tensile strength versus the density of the material can be seen for many different categories of materials \cite{ashby}. Note that composites have a higher strength to weight ratio that most metal alloys. 
+A metallic build-up is the more traditional method of designing aircraft structures, where most or all primary structures are composed of metal alloys like aluminum, steel, and titanium. This method of construction is typically cost-effective and weight efficient for most structures, however, there are downsides such as damage tolerance and fatigue. A composite build-up requires relatively high development and manufacturing costs using modern technology, but can offer incredible weight-savings and operational cost savings compared to metal structure due to their high strength-to-weight ratio and fatigue and damage tolerance resistance. 
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=\linewidth]{Photos/strength_density.png}
-    \caption{Strength versus Density for Different Materials}
-    \label{fig:strength_density}
-\end{figure}
+A hybrid build-up is a method where both metals and composites are used for different structures depending on key factors such as fatigue, damage tolerance, ultimate strength per density ratio, cost of manufacturing, assembly methods, and operational costs. Hybrid designs usually reduce overall costs and empty weight of the structure, which results in the wings and stabilizers to be a mainly composite build-up and the fuselage and other secondary structures to be a metal build-up. Hybrid construction is a newer technology, and as the development of manufacturing of composites advances, this style of construction may become more prevalent in industry. A notable aircraft which uses a hybrid build would be the Boeing 777X, in which the wings and stabilizers are composite and the fuselage is metallic. The reason the fuselage is metallic and not composite comes down to the difficulties in manufacturing a round and continuous composite structure, such as the fuselage and empennage sections. A notable aircraft which utilizes mainly composite construction, however, is the Boeing 787. The B787 encountered enormous program overruns in costs and time, mainly stemming from the fuselage construction.
 
-A hybrid build-up is a method where both metals and composites are used for different structures depending on key factors such as fatigue, damage tolerance, ultimate strength per density ratio, cost of manufacturing, assembly methods, and operational costs. Hybrid designs usually optimized costs and weight of the structure, which results in the wings and stabilizers to be a mainly composite build-up, and the fuselage and other secondary structures to be a metal build-up. Hybrid construction is a newer technology, and as the development of manufacturing of composites advances, this style of construction may become more prevalent in industry. A notable aircraft which uses a hybrid build would be the Boeing 777-X, in which the wings and stabilizers are composite and the fuselage is metallic. The reason the fuselage is metallic and not composite comes down to the difficulties in manufacturing a round and continuous composite structure, such as the fuselage and empennage sections. A notable aircraft which utilizes mainly composite construction is the Boeing 787, as seen in Figure \ref{fig:787 materials} \cite{787_Mat}.
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=\linewidth]{Photos/787 Materials.png}
-    \caption{Material Composition of the B787}
-    \label{fig:787 materials}
-\end{figure}
-
-\FloatBarrier
-In Table \ref{tab:pugh_structures}, the benefits and costs for each build-up construction method were weighed in a Pugh matrix given the requirements of cost reduction and the desired aspect ratio and wingspan.
+In Table \ref{tab:pugh_structures}, the benefits and costs for each build-up construction method were weighed in a Pugh matrix given the requirements such as cost, manufacturing, and mechanical properties. Cost was weighted the highest due to the RFP requirement which states the proposed aircraft must reduce costs \cite{RFP}.
 
 \begin{table}[!h]
 \centering
@@ -58,7 +43,59 @@ Environmental Impact & 3 & 8 & 4 & 6 \\  \hline \hline
 \end{table}
 \FloatBarrier
 
-Given the Pugh matrix, a hybrid construction is most ideal for the given aircraft requirements. A low fidelity analysis of the structure can assume an isotropic material with the mechanical properties of an ideal composite layup to create a factor to apply to estimations of structure loading given by Raymer \cite{raymer}. A high fidelity analysis of the composite structure would require one of two methods: run FEA on an isotropic material with similar properties to an ideal composite layup, or run FEA with a specific composite build-up in a capable software such as ANSYS.
+Given the qualitative Pugh matrix, a hybrid construction is most ideal for the given aircraft requirements. This would entail the wingbox and fuselage, including the longerons, frames, and floor joists being constructed from an aluminum alloy. The landing gear will be constructed primary from steel and titanium alloys. The wings and stabilizers, including the skins, ribs, ribs, and stringers would then be modelled using a uni-directional composite material, which assumes isotropic material properties. In reality, composites are anisotropic, but analysis of a directional layup composite is very difficult and not in the scope of this preliminary design. 
+
+In Table \ref{tab:material_selection}, the material composition of each structure can be seen. It can be noticed that all primary structure uses carbon fiber reinforced polymer (CFRP) and epoxy, fiberglass and epoxy, aluminum, steel, or titanium alloys.
+
+% Method 1
+\begin{table}[!h]
+\centering
+\caption{Primary Structure Material Composition}
+\begin{tabular}{|p{3.5cm}||p{2cm}|p{6cm}| }
+\toprule
+\multicolumn{1}{|c||}{\textbf{Structure}} & \multicolumn{1}{c|}{\textbf{Components}} & \multicolumn{1}{c|}{\textbf{Material}} \\ \hline \hline 
+\multirow{4}{*}{Wing} & Skin & \multirow{4}{*}{CFRP/Epoxy} \\
+                     & Ribs & \\
+                     & Spars & \\
+                     & Stringers & \\ \hline
+\multirow{4}{*}{Horizontal Stabilizer} & Skin & \multirow{4}{*}{CFRP/Epoxy or Fiberglass/Epoxy} \\
+                     & Ribs & \\
+                     & Spars & \\
+                     & Stringers & \\ \hline
+\multirow{4}{*}{Vertical Stabilizer} & Skin & \multirow{4}{*}{CFRP/Epoxy or Fiberglass/Epoxy} \\
+                     & Ribs & \\
+                     & Spars & \\
+                     & Stringers & \\ \hline
+\multirow{4}{*}{Fuselage} & Skin & \multirow{4}{*}{2024-T4 Aluminum} \\
+                     & Longerons & \\
+                     & Frames & \\
+                     & Wingbox & \\ \hline
+\multirow{3}{*}{Landing Gear} & Struts & \multirow{3}{*}{Aluminum, Steel, or Titanium Alloys} \\
+                     & Axles & \\
+                     & Bulkheads & \\ \hline
+\bottomrule
+\end{tabular}
+\label{tab:material_selection}
+\end{table}
+
+% Method 2
+\begin{table}[!h]
+\centering
+\caption{Primary Structure Material Composition}
+\begin{tabular}{|p{3.5cm}||p{2cm}|p{6cm}|}\toprule
+\textbf{Structure} & \textbf{Components} & \textbf{Material} \\ \hline \hline 
+
+    Wing & Skins \newline Ribs \newline Spars \newline Stringers & CFRP/Epoxy \\ \hline
+    Horizontal Stabilizer & Skins \newline Ribs \newline Spars \newline Stringers & CFRP/Epoxy or Fiberglass/Epoxy \\\hline
+    Vertical Stabilizer & Skins \newline Ribs \newline Spars \newline Stringers & CFRP/Epoxy or Fiberglass/Epoxy \\\hline
+    Fuselage & Skins \newline Longerons \newline Frames \newline Wingbox & 2024-T4 Aluminium \\\hline
+    Landing Gear & Struts \newline Axles \newline Bulkheads & Aluminium, Steel, or Titanium Alloys \\ \bottomrule
+
+\end{tabular}
+\label{tab:material_selection}
+\end{table}
+
+For analysis, the CFRP material chosen was 
 
 \subsubsection{Construction and Layout (\textit{CE})}
 Given the hybrid construction method, the wings and stabilizers require a newer method of construction compared to the traditional metallic construction. Since composite layups are essentially an additive manufacturing technique, the stringers can be integrated into the upper and lower panels of the wings and stabilizers. This alone saves incredible costs and weight by eliminating the use of fasteners in high-load locations. The absence of fasteners increases the damage tolerance and fatigue rating of the structure as well.
@@ -75,7 +112,8 @@ The spars are where composites differ greatly from traditional 3-piece spar cons
     \label{fig:spar_layout}
 \end{figure}
 
-Ribs in the wings are traditionally multi-piece substructures comprised of machined aluminum parts. The benefit to using aluminum ribs in the wing comes from the fact that composites are difficult to utilize on very complex and dramatic geometry. However, due to manufacturing costs, a multi-piece composite rib was chosen over a monolithic metallic rib. In an effort to save more cost and manufacturing troubles, a monolithic rib structure, with the rib posts, chords, webs, and pads formed in a single composite part, can be investigated at a later date. Ribs in the stabilizers are typically not as complex as a rib in the wings due to the lower-loaded and smaller structure. In the stabilizers, composite ribs may be utilized for weight savings. The current rib spacing is \~30 inches, which is a derivative of the approximation given by Raymer with a slight adjustment for composite composition. A more detailed analysis is needed to improve spacing and sizing of the ribs \cite{raymer}.
+Ribs in the wings are traditionally multi-piece substructures comprised of machined aluminum parts. The benefit to using aluminum ribs in the wing comes from the fact that composites are difficult to utilize on very complex and dramatic geometry. However, due to manufacturing costs, a multi-piece composite rib was chosen over a monolithic metallic rib. In an effort to save more cost and manufacturing troubles, a monolithic rib structure, with the rib posts, chords, webs, and pads formed in a single composite part, can be investigated at a later date. Ribs in the stabilizers are typically not as complex as a rib in the wings due to the lower-loaded and smaller structure. In the stabilizers, composite ribs may be utilized for weight savings. The current rib spacing is 30 inches, which is a derivative of the approximation given by Raymer with a slight adjustment for composite composition. A more detailed analysis is needed to improve spacing and sizing of the ribs \cite{raymer}. \hl{would hide the more detailed is needed stuff; tildes don't show up unless you type (see below)}
+$\sim$
 
 Since the fuselage is a metallic structure, a common layout of frames, stringers, and floor joists can be utilized. The floor joists may be a composite part, as the joists are not primary structure, and the connection method to the frames of the fuselage is by brackets and fasteners. Frames in the business class are spaced with the same distance of the business class seat pitch, and the economy frames are spaced the same distance of the economy seat pitch. The seat pitches are defined in Section \ref{section: internal config}. The frames and stringers are spaced such that no windows or exit doors are covered or physically blocked. Several frames will be considered "floating", or not connected to the skin of the fuselage, and others being traditional frames. The floating frames are only mounted to the stringers, rather than the actual skin of the fuselage. Floating frames increase fatigue life, as fewer holes are introduced into the fuselage skin. It will also need to be noted that frames cannot be present where emergency exit doors and windows exist.
 
@@ -108,29 +146,29 @@ Given that the aircraft is a wide-body, large wingspan structure, a bolt-on meth
 It can also be seen in Fig. \ref{fig:wing_structure} that the ribs of the wing are currently modelled such that they are parallel to the stream-wise direction. Typically this is unconventional, as stress risers form at the rib and spar junction (at the rib posts). A more structurally sound and easy to manufacture configuration would be to align the ribs to be perpendicular to the quarter-chord or front spar.
 
 \subsubsection{Future Work for Structures (\textit{CE})}
-Future work includes several key tasks. First item to tackle is carrying-out a full FEA analysis on the wing and fuselage. In the CAD model, the structure of the aircraft needs to be improved by adding more detail to the stabilizers and the nose cone once geometric sizing is completed, as well as change the direction of the ribs to be perpendicular to the quarter-chord or front spar to minimize costs and stress risers. Some more future work includes the creation of useful trade studies, particularly trade studies comparing the sizing of the spars and spacing of the ribs in the wing to the stiffness and weight of the wing. 
+Future work includes several key tasks. First item to tackle is carrying-out a full FEA analysis on the wing and fuselage. In the CAD model, the structure of the aircraft needs to be improved by adding more detail to the stabilizers and the nose cone once geometric sizing is completed, as well as change the direction of the ribs to be perpendicular to the quarter-chord or front spar to minimize costs and stress risers. Some more future work includes the creation of useful trade studies, particularly trade studies comparing the sizing of the spars and spacing of the ribs in the wing to the stiffness and weight of the wing. \hl{kill or rename}
 
 \subsection{Loads (\textit{MK})}
-\subsubsection{V-n Diagram}
+\subsubsection{V-N Diagram}
 \label{subvn}
-One important aspect in the structural analysis of the aircraft is determining the limits in the performance of the aircraft. This is done using a V-n diagram, as shown in Figure \ref{figVN}. This diagram incorporates parameters such as wing loading and performance velocities (maneuvering, cruise, and dive velocities) along with limit loading factors. Maximum positive and negative limit loading factors of 2.15 and -1.0 were chosen, respectively, according to the regulations set forth in FAA 14 CFR Part 25.337 \cite{cfr}, Limit Maneuvering Load Factors. Additionally, gust loads were added according to CFR Part 25.341 \cite{cfr}. The gust load lines were further calculated using a safety factor of 1.5, as specified in FAA 14 CFR Part 25.303, Factor of Safety \cite{cfr}. Note that the velocities displayed in the diagram (Figure \ref{figVN}) units displayed as equivalent velocities (KEAS). This V-n diagram was created assuming sea-level conditions. 
+One important aspect in the structural analysis of the aircraft is determining the limits in the performance of the aircraft. This is done using a V-N diagram, as shown in Figure \ref{figVN}. This diagram incorporates parameters such as wing loading and performance velocities (maneuvering, cruise, and dive velocities) along with limit loading factors. Maximum positive and negative limit loading factors of 2.50 and -1.0 were chosen, respectively, according to the regulations set forth in FAA 14 CFR Part 25.337 \cite{cfr}, Limit Maneuvering Load Factors. Additionally, gust loads were added according to CFR Part 25.341 \cite{cfr}. The gust load lines were further calculated using a safety factor of 1.5, as specified in FAA 14 CFR Part 25.303, Factor of Safety \cite{cfr}. Note that the velocities displayed in the diagram (Figure \ref{figVN}) units displayed as equivalent velocities (KEAS). This V-N diagram was created assuming sea-level conditions. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Photos/VN_Diagram.pdf}
-    \caption{V-n Diagram of Limit Load Factors}
+    \caption{V-N Diagram of Limit Load Factors}
     \label{figVN}
 \end{figure}
 
-Using equations from Roskam \cite{roskam_5}, design maneuvering speed ($V_{A}$), cruising speed ($V_{C}$) and design diving speed ($V_{D}$) were estimated to be 208 kts., 422 kts. and 527 kts, respectively. Furthermore, the calculation of the positive and negative stall lines involved the use of equations from Roskam \cite{roskam_5}. At sea-level and at a limit loading factor of 1 and -1, the stall speeds were calculated to be 142 kts. and 159 kts., respectively.
+As seen from Figure \ref{figVN}, gust loads do not limit the performance of the SAM Mk. 1. Moreover, using equations from Roskam \cite{roskam_5}, design maneuvering speed ($V_{A}$), cruising speed ($V_{C}$) and design diving speed ($V_{D}$) were estimated to be 220 kts, 440 kts. and 620 kts, respectively. Furthermore, the calculation of the positive and negative stall lines involved the use of equations from Roskam \cite{roskam_5}. At sea-level and at a limit loading factor of 1 and -1, the stall speeds were calculated to be 140 kts and 160 kts, respectively.
 
 \subsubsection{Wing Loading}
 \label{winlod}
-The loading experienced on the wing was analyzed. Specifically, Schrenk's approximation was used to estimate the span-wise loading on the wing, using equations found in Chapter 14 of Raymer \cite{raymer} as well as the positive limit loading factor from the V-n Diagram. First, the elliptical loading was estimated across the wing. Then, a rectangular method was used to estimate the loading on the wing. Both of these methods required the Schrenk's Approximation Set, which was estimated to be about 726,360 lbf. Then, Schrenk's approximation takes the average of the elliptical distribution and a rectangular distribution to provide a semi-empirical approach to visualizing the load distribution on the wing. Figure \ref{schrenk} shows the wing loading using Schrenk's approximation along with the elliptical and rectangular approximation across half the wing, with the other half being symmetric. 
+The loading experienced on the wing was analyzed. Specifically, Schrenk's approximation was used to estimate the span-wise loading on the wing, using equations found in Chapter 14 of Raymer \cite{raymer} as well as the positive limit loading factor from the V-n Diagram. First, the elliptical loading was estimated across the wing. Then, a rectangular method was used to estimate the loading on the wing. Both of these methods required the Schrenk's Approximation Set, which was estimated to be about 728,000 lb. Then, Schrenk's approximation takes the average of the elliptical distribution and a rectangular distribution to provide a semi-empirical approach to visualizing the load distribution on the wing. Figure \ref{schrenk} shows the wing loading using Schrenk's approximation along with the elliptical and rectangular approximation across half the wing, with the other half being symmetric. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{Photos/Loading.pdf}
+    \includegraphics[width=1.0\linewidth]{Photos/Schrenks.pdf}
     \caption{Load Distribution Across the Half-span Wing}
     \label{schrenk}
 \end{figure}
@@ -150,8 +188,9 @@ After estimating the load distribution on the wing, the internal forces of the w
     \caption{Bending Moment Diagram Across the Half-span Wing}
     \label{momentdiag}
 \end{figure}
+
 \clearpage
-Finally, the ultimate shear load and ultimate bending moment need to be determined. These can be estimated by estimating the distance from the center of the fuselage to the location of the wing attachment to the fuselage. This wing attachment location was estimated to be 6.2 ft from the center of the fuselage. This location is where the wing will feel the ultimate shear load and bending moment, which were estimated to be -326,600 lbf and 11,251,000 lbf-ft, respectively. These are represented in Figures \ref{sheardiag} and \ref{momentdiag} as red dots. 
+Finally, the ultimate shear load and ultimate bending moment need to be determined. These can be estimated by estimating the distance from the center of the fuselage to the location of the wing attachment to the fuselage. This wing attachment location was estimated to be 6.2 ft from the center of the fuselage. This location is where the wing will feel the ultimate shear load and bending moment, which were estimated to be -327,000 lb and 11,276,000 lb-ft, respectively. These are represented in Figures \ref{sheardiag} and \ref{momentdiag} as black dots. 
 
 \subsubsection{Load Paths}
 As the wing is experiencing aerodynamic loads, those loads are transferred onto the structure of the aircraft. From the Schrenk's approximation of the lift distribution across the wing, the load then gets transferred onto the wing panels. From there, the loading transfers onto the spars, which lead to the wing box. Then, from the wing box, the loading goes into the fuselage, where the maximum loading occurs. The ribs on the wing absorb the shear produced by the bending moment from the lift distribution. Additionally, the engine also produces a load onto the wing. This loading follows a similar path, except it moves into the pylon first, then into the wing panels. From there, the load transfers into the spars, which moves into the wing box, and finally into the fuselage. Figure \ref{loadpath} shows a diagram of the load paths across half the aircraft, since it will be symmetric along the center line of the fuselage. 
@@ -159,16 +198,43 @@ As the wing is experiencing aerodynamic loads, those loads are transferred onto 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{Photos/Load_Path.pdf}
-    \caption{Load Path of the Lift Distribution and Engine Weight}
+    \caption{Load Path of the Lift Distribution, Engine Weight, and Pressurization}
     \label{loadpath}
 \end{figure}
+
+\newpage
+Furthermore, the aircraft will experience pressurization loads during cruise flight. Accoriding to the RFP \cite{RFP}, the aircraft will need to be pressurized to 8,000 ft pressure altitude above that altitude. Thus, there will be a pressure differential, specifically a max differential at the point where the aircraft is at its highest altitude. Since SAM Mk. 1 will be starting at a cruise altitude of 37,000 and end at 41,000 ft, the last altitude height will carry the highest pressure differential in the aircraft. The fuselage will feel this differential as displayed in the load path diagram in Figure \ref{loadpath}.
+Table \ref{tab:pres} displays the pressures the aircraft will be pressurized to, the pressure at 41,000 ft altitude, and the differential between both those values. 
+
+\begin{table}[!h]
+    \centering
+    \caption{Pressure Differential}
+    \begin{tabular}{|c|c|c|c|}\toprule 
+     & \textbf{8,000 ft (Cabin)} & \textbf{41,000 ft} & \textbf{Difference} \\ \hline 
+    \textbf{Pressure [psi]} & 10.92 & 2.59 & 8.32 \\ 
+    \bottomrule
+    \end{tabular}
+    \label{tab:pres}
+\end{table}
+
+With this pressure difference comes a stress on the fuselage skin. This pressure differential results in a hoop stress that the fuselage feels. To calculate this stress, the hoop stress equation for a thin-walled pressure vessel was used, along with a skin thickness of 0.045 in. Table \ref{hoopstrs} displays the hoop stress felt by the fuselage.
+
+\begin{table}[!h]
+    \centering
+    \caption{Pressure Differential}
+    \begin{tabular}{|c|}\toprule 
+    \textbf{Hoop Stress (8,000 ft) [psi]} \\ \hline
+    26,200 \\ 
+    \bottomrule
+    \end{tabular}
+    \label{hoopstrs}
+\end{table}
 
 \subsubsection{Load Cases of Interest}
 \label{lcoi}
 There are several cases of loads that apply to the aircraft, with some load cases being more significant than others. The highest loads experienced by the aircraft come from maneuver and gust loads, as described in the V-n diagram in Section \ref{subvn}. An example of a maneuvering load is turning, where the aircraft needs to be able to handle the amount of gs experienced when suddenly changing directions. The next important load case is during cruise flight. In particular, this segment of the mission experiences pressurization loads. This is significant because as altitude increases, the pressure outside the cabin will decrease while the inside cabin pressure stays at a constant value. This will create some bulging of the fuselage, which will put high stresses on the aircraft. Moreover, in cruise flight and climb and descent, the aircraft will experience aerodynamic loads, as described in Section \ref{winlod}. This will put stresses across the span of the wing, which will lead to high stress at the interface of the wing and fuselage. Another load case of interest corresponds to the aircraft landing. This puts stresses not only on the landing gears, but this transfers to the fuselage and wing of the aircraft. Finally, the taxi segment of the mission profile experiences stresses on the aircraft. While the aircraft is not actually flying at this stage, it still experiences loads due to any turns or bumps it passes. While these are not as significant as maneuvering and gust loads, these loads are still an important aspect to take into consideration when analyzing the loads experienced by the aircraft.
 
-\subsubsection{Future Work}
-In the future, further work will performed in analyzing the load cases of interest, as stated in Section \ref{lcoi}. In particular, extreme loads at each of the load cases of interest will be investigated to verify that SAM Mk. I will withstand those loads. Moreover, pressurization will be investigated during cruise flight; in particular, the pressurization loads will be estimated across the fuselage while the aircraft is in cruise flight. 
+
 
 % \textcolor{red}{
 % \begin{itemize}
@@ -217,16 +283,14 @@ With the SAM Mark I falling within the weight and size boundaries of established
 \begin{table}[!h]
     \centering
         \caption{Tire Specifications}
-    \begin{tabular}{|c||c|c|c|c|c|c|}\toprule
-         & \textbf{Size} & \textbf{Ply Rating} & \textbf{Speed Rating [MPH]} & \textbf{Rated Load [lb]} & \textbf{Average Weigh [lb]} & \textbf{Model} \\\hline \hline
+    \begin{tabular}{|c||c|c|>{\centering}p{.8in}|>{\centering}p{.7in}|>{\centering}p{.95in}|c|}\toprule
+         & \textbf{Size} & \textbf{Ply Rating} & \textbf{Speed Rating [MPH]} & \textbf{Rated Load [lb]} & \textbf{Average Weight [lb]} & \textbf{Model} \\\hline \hline
          \textbf{Main} & 52x21.0R22 & 36 & 235 & 66,500 & 266 & APR07700 \\ \hline
          \textbf{Nose} & 43x17.5R17 & 32 & 235 & 44,500 & 156 & APR06600 \\ \hline
     \end{tabular}
     \label{tab:tires}
 \end{table}
 
-\subsubsection{Future Work}
-Future work will include a more detailed CAD model, as well as the modelling of the landing gear stowage bay. The kinematics will also be animated rather than depicted by a step-by-step collage.
 
 % \textcolor{red}{
 % \begin{itemize}

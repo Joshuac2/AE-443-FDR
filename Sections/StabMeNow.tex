@@ -3,9 +3,9 @@
 \begin{table}[!h]
     \centering
     \caption{Stabilizer Dimensions}
-    \begin{tabular}{|c|c|c|c|} \toprule
+    \begin{tabular}{|c||c|c|c|} \toprule
         \textbf{Description} & {\textbf{Horizontal Stabilizer}} & 
-        {\textbf{Vertical Stabilizer}} & \textbf{Units}\\ \midrule
+        {\textbf{Vertical Stabilizer}} & \textbf{Units}\\ \midrule \hline
         AR & 4.5 & 1.5 & $\sim$ \\ \hline
         b (\textit{span}) & 67 & 27 & ft \\ \hline 
         $s_{\text{wing}}$ (\textit{area}) & 1,000 & 500 & ft$^2$ \\ \hline
@@ -18,17 +18,24 @@
     \label{tab:wingsizing}
 \end{table}
 
-Both the horizontal stabilizer and vertical stabilizer are at very early stages in sizing.  Location of the stabilizers, as notated as the distance between the $\text{MAC}_{\text{wing}}$ and $\text{MAC}_{\text{stabilizers}}$, is likely to change after further stability analysis.
+Both the horizontal stabilizer \hl{edit out early stages etc} and vertical stabilizer are at very early stages in sizing.  Location of the stabilizers, as notated as the distance between the $\text{MAC}_{\text{wing}}$ and $\text{MAC}_{\text{stabilizers}}$, is likely to change after further stability analysis.
 
 \subsubsection{Horizontal Stabilizer}
-SAM  Mk 1 uses a standard tail configuration.  The horizontal stabilizer is initially sized to be 25\% of $S_{wing}$.  This provides a starting point from which to begin stability analysis.  Use of an inverted NASA SC(2)-0412 airfoil for the horizontal stabilizer is proposed to provide a counter moment to the lifting effects of the wing.
+SAM Mk I uses a standard tail configuration.  The horizontal stabilizer is initially sized to be 25\% of $S_{wing}$.  This provides a starting point from which to begin stability analysis.  Use of an inverted NASA SC(2)-0412 airfoil for the horizontal stabilizer is proposed to provide a counter moment to the lifting effects of the wing.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Photos/stab/htail.png}
+    \caption{Horizontal Stabilizer Top View}
+    \label{fig:htailstab}
+\end{figure}
 
 \subsubsection{Vertical Stabilizer}
-The vertical stabilizer is sized to be approximately 12.5\% of $S_{wing}$.  Additional attention must be directed at the vertical stabilizer to ensure directional stability.   
+The vertical stabilizer is sized to be approximately 12.5\% of $S_{wing}$.  Additional attention must be directed at the vertical stabilizer to ensure directional stability.
 
 \subsection{Control Surfaces}
-Several control surfaces are built into the wing, horizontal stabilizer, and vertical stabilizer.  The main wing contains a flap mechanism from spanwise locations $11.5$ ft to $69.1$ ft and deflects a maximum of $\delta_F = 30\degree$.  An initial aileron sizing has determined potential placement from $72$ ft to $90$ ft.  The aileron deflection angle range has yet to be sized and will depend on performance decision for roll speed.  A trade study is currently underway to determine whether Sam Mk 1 should lock ailerons and implement flaperons for the transonic cruise stage.  The rudder is located on the vertical tail and spans the entire length of the tail, $27$ ft, as is normal in comparable aircraft.  The elevators are located on the horizontal stabilizer and spans from $2$ ft to $65$ ft.  Yet another trade study is taking place to determine the selection of trim tabs or a trimmable horizontal stabilizer.
+Several control surfaces are built into the wing, horizontal stabilizer, and vertical stabilizer.  The main wing contains a flap mechanism from spanwise locations $11.5$ ft to $69.1$ ft and deflects a maximum of $\delta_F = 30\degree$.  An initial aileron sizing has determined potential placement from $72$ ft to $90$ ft.  The aileron deflection angle range has yet to be sized and will depend on performance decision for roll speed.  A trade study is currently underway to determine whether SAM Mk I should lock ailerons and implement flaperons for the transonic cruise stage.  The rudder is located on the vertical tail and spans the entire length of the tail, $27$ ft, as is normal in comparable aircraft.  The elevators are located on the horizontal stabilizer and spans from $2$ ft to $65$ ft.  Yet another trade study is taking place to determine the selection of trim tabs or a trimmable horizontal stabilizer.
 
+\clearpage
 % \subsection{Pitch Trim Control}
 
 % \subsection{Longitudinal Static Stability}
