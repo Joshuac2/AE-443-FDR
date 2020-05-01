@@ -8,7 +8,7 @@ The AIAA RFP \cite{RFP} requires this short range aircraft to have a range of 3,
 % In the future, the flight envelope as well as fuel estimation of each segment in the mission profile will be performed. Additionally, the time-step integration of cruise will be refined and the time-step integration process will be implemented for the climb, descend, and loiter segments of the mission. Further analysis will performed on determining the drag of each mission segment as well as regulating that the design stays within the requirements set forth by the RFP \cite{RFP}. obsolete now
 
 \subsection{Determination of Cruising Altitude (\textit{MK})}
-To determine a valid cruising altitude, a trade study was performed on the two-class capacity of similiar aircraft that either are currently in service or were in the past. This will facilitate the decision of which altitude will be best to cruise at for SAM Mk. 1. Figure \ref{cruxalt} shows four aircraft and their respective cruising altitudes and two-class passenger capacity\cite{butterworth}.
+To determine a valid cruising altitude, a trade study was performed on the two-class capacity of similiar aircraft that either are currently in service or were in the past. This will facilitate the decision of which altitude will be best to cruise at for SAM Mk 1. Figure \ref{cruxalt} shows four aircraft and their respective cruising altitudes and two-class passenger capacity\cite{butterworth}.
 
 \begin{table}[!h]
     \centering
@@ -87,27 +87,27 @@ When analyzing takeoff and landing distances, Team Toucan used the methods descr
     \label{tab:land}
 \end{table}
 
-Moreover, during the landing phase of the mission, the maximum landing weight of the aircraft was determined to be 395,000 lb, which gives the SAM Mk. I a max landing weight fraction of about 0.878. The aircraft will also takeoff with a velocity of approximately 160 KTAS. and will land with a maximum velocity of 145 KCAS, as stated in the RFP. The results described in Figure \ref{tab:land} assume the aircraft burned all non-block fuel required for the design mission. Finally, from the estimates, excluding wet concrete, SAM Mk. I meets the requirements set forth by the RFP. This gives the SAM Mk. I the capability to operate in a wide range of airports with runways longer than 6,400 ft on dry concrete for takeoff and runways longer than 5,500 ft on dry concrete for landing.
+Moreover, during the landing phase of the mission, the maximum landing weight of the aircraft was determined to be 395,000 lb, which gives the SAM Mk. I a max landing weight fraction of about 0.878. The aircraft will also takeoff with a velocity of approximately 160 KTAS. and will land with a maximum velocity of 145 KCAS, as stated in the RFP. The results described in Figure \ref{tab:land} assume the aircraft burned all non-block fuel required for the design mission. Finally, from the estimates, excluding wet concrete, SAM Mk I meets the requirements set forth by the RFP. This gives the SAM Mk I the capability to operate in a wide range of airports with runways longer than 6,400 ft on dry concrete for takeoff and runways longer than 5,500 ft on dry concrete for landing.
 
 \subsection{Rate of Climb (\textit{MK})}
-After takeoff, SAM Mk. I will begin to perform the climb process. The aircraft will start to climb immediately after take-off and climb to the first cruising altitude of 37,000 ft. By using a time-step integration, Team Toucan obtained an estimated rate of climb of 7,100 ft/min, with a flight path angle of about 16 degrees. In these estimations, both engines were included, but were not at full thrust capacity for the duration of climb. Instead, the time-step integration method assumed the engines operation at 70\% thrust. Additionally, the total fuel consumed during the climb segment of the mission was estimated to be about 8,060 lb, with a total climb time of slightly less than 13 minutes, also using the time-step integration method described earlier. Finally, it was estimated that through the duration of the process, the aircraft will have traveled about 145 NM in the horizontal distance.
+After takeoff, SAM Mk I will begin to perform the climb process. The aircraft will start to climb immediately after take-off and climb to the first cruising altitude of 37,000 ft. By using a time-step integration, Team Toucan obtained an estimated rate of climb of 7,100 ft/min, with a flight path angle of about 16 degrees. In these estimations, both engines were included, but were not at full thrust capacity for the duration of climb. Instead, the time-step integration method assumed the engines operation at 70\% thrust. Additionally, the total fuel consumed during the climb segment of the mission was estimated to be about 8,060 lb, with a total climb time of slightly less than 13 minutes, also using the time-step integration method described earlier. Finally, it was estimated that through the duration of the process, the aircraft will have traveled about 145 NM in the horizontal distance.
 
-The service ceiling of the aircraft was determined by further analyzing rate of climb in a time-step integration method. Specifically, the service ceiling is defined when the aircraft achieves a rate of climb of less than 500 ft/min. To visually inspect this, a plot of rate of climb as a function of altitude can be used. The service ceiling of SAM Mk. 1, shown by the dotted line in Figure \ref{serceil}, is about 46,500 ft. One note about this service ceiling is that this was determined with both engines running at maximum thrust capacity.  
+The service ceiling of the aircraft was determined by further analyzing rate of climb in a time-step integration method. Specifically, the service ceiling is defined when the aircraft achieves a rate of climb of less than 500 ft/min. To visually inspect this, a plot of rate of climb as a function of altitude can be used. The service ceiling of SAM Mk 1, shown by the dotted line in Figure \ref{serceil}, is about 46,500 ft. One note about this service ceiling is that this was determined with both engines running at maximum thrust capacity.  
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{Photos/Service_Ceiling.pdf}
-    \caption{Service Ceiling -  SAM Mk. 1}
+    \caption{Service Ceiling -  SAM Mk 1}
     \label{serceil}
  \end{figure}
 
 \subsection{Cruise (\textit{MK})}
-An important part of the of the mission of the SAM Mk. I is the cruise segment. In this segment, the design cruise speed was chosen to be M 0.775, as described in Section \ref{crusspeed}. Next, the aircraft will begin the cruise segment at an altitude of 37,000 ft, where it will step climb in segments of 2,000 ft to 39,000 ft and 41,000 ft, respectively. This process is performed to maintain a constant and high lift-to-drag ratio throughout the cruise segment of the design mission. Two methods were used to estimated the overall performance of the cruise segment. First, a time-step integration was used to determine the range and endurance of our aircraft. Each step climb was performed after a third of the allotted cruise fuel (which will be discussed in Section "Fuel per Mission Segment") was burned during the process. Once the allotted cruise fuel was all burned, the total range and total endurance of the aircraft was calculated. Second, the total range and total endurance were calculated using the Breguet-Range and Breguet-Endurance equations. This was then compared to the time-step integration method to determine the accuracy of both methods to one another. Table \ref{tab:cruise} shows the range, endurance, and percent error between both methods. 
+An important part of the of the mission of the SAM Mk I is the cruise segment. In this segment, the design cruise speed was chosen to be M 0.775, as described in Section \ref{crusspeed}. Next, the aircraft will begin the cruise segment at an altitude of 37,000 ft, where it will step climb in segments of 2,000 ft to 39,000 ft and 41,000 ft, respectively. This process is performed to maintain a constant and high lift-to-drag ratio throughout the cruise segment of the design mission. Two methods were used to estimated the overall performance of the cruise segment. First, a time-step integration was used to determine the range and endurance of our aircraft. Each step climb was performed after a third of the allotted cruise fuel (which will be discussed in Section "Fuel per Mission Segment") was burned during the process. Once the allotted cruise fuel was all burned, the total range and total endurance of the aircraft was calculated. Second, the total range and total endurance were calculated using the Breguet-Range and Breguet-Endurance equations. This was then compared to the time-step integration method to determine the accuracy of both methods to one another. Table \ref{tab:cruise} shows the range, endurance, and percent error between both methods. 
 
 \begin{table}[!h]
     \centering
     \caption{Cruise: Breguet Method and Time-step Integration}
-    \begin{tabular}{|p{1in}|p{1in}|p{1.5in}|p{1in}|}\toprule 
+    \begin{tabular}{|p{1in}||p{1in}|p{1.5in}|p{1in}|}\toprule 
      & \textbf{Breguet Method} & \textbf{Time-step Integration} & \textbf{\% Difference} \\ \hline \hline
     \textbf{Range [NM]} & 3,500 & 3,504 & 0.11 \\ \hline
     \textbf{Endurance [hr]} & 7.76 & 7.77 & 0.11 \\ 
@@ -116,7 +116,7 @@ An important part of the of the mission of the SAM Mk. I is the cruise segment. 
     \label{tab:cruise}
 \end{table}
 
-From the data, SAM Mk. I successfully meets the range requirement set by the RFP. Additionally, it can be seen that the difference between the Breguet method and time-step integration is quite small, thus, solidifying the use of the Breguet method for cruise estimation. 
+From the data, SAM Mk I successfully meets the range requirement set by the RFP. Additionally, it can be seen that the difference between the Breguet method and time-step integration is quite small, thus, solidifying the use of the Breguet method for cruise estimation. 
 
 \subsection{Fuel per Mission Segment (\textit{MK})}
 An important parameter to determine for SAM Mk I is how much fuel is required for the duration of the mission. The mission can be broken up into two main section: non-block and reserves. In the non-block section, the segments include Warm-up, Taxi, and TO (WUTTO), Climb, Cruise, Descend, 5 minute loiter at 5,000 ft, and Approach, Landing, and Taxi (ALT). The reserves will contain a climb to 30,000 ft, a 200 NM alternate to another airport, a 30 min loiter at the airport, descend, 5\% contingency fuel, and a 5 minute loiter at 5,000 ft. Weight fractions from Raymer\cite{raymer} were used for WUTTO and ALT. Fuel estimation for cruise and alternate destination was determined using Breguet range while the loiter segments used Breguet Endurance equations. Finally, all climb and descend values were estimated using a time-step integration method. Table \ref{fuelfrac} shows the calculated fuel fractions. 
@@ -124,7 +124,7 @@ An important parameter to determine for SAM Mk I is how much fuel is required fo
 \begin{table}[!h]
     \centering
     \caption{Fuel Fractions for Each Mission Segment}
-    \begin{tabular}{|p{1.75in}|p{1in}|p{1.5in}|}\toprule 
+    \begin{tabular}{|p{1.75in}||p{1in}|p{1.5in}|}\toprule 
     \textbf{Mission Segment} & \textbf{Fuel Weight [lb]} & \textbf{Calculated Fuel Fraction}\\ \hline \hline
     WUTTO & 6,750 & 0.985 \\ \hline
     Climb & 8,060 & 0.982  \\ \hline
@@ -175,7 +175,7 @@ The payload-range diagram is used to analyze the range of the aircraft as payloa
 
 \subsection{Flight Envelope (\textit{MK})}
 \label{ssfl}
-The flight envelope is an important diagram that demonstrates the capability of an aircraft, in terms of speed and what the altitude limits are. Additionally, it shows the service ceiling of the aircraft. For SAM Mk. 1, the maximum and minimum design velocities at sea-level were determined to be 640 kts and 150 kts, respectively. The maximum velocity was determined from the max speed at which the aircraft could structurally fly (max dive speed), which will be discussed further in the Loads Section. The minimum speeds was bounded by the stall speed of the SAM Mk I. Furthermore, the absolute ceiling of SAM Mk. I was determined to be 49,700 ft. This shows that SAM Mk I's cruising altitudes are within the minimum and maximum parameters. A visual representation of the flight envelope can be seen in Figure \ref{flyenv}, with the green shade corresponding to the velocity and altitude limits of the aircraft. 
+The flight envelope is an important diagram that demonstrates the capability of an aircraft, in terms of speed and what the altitude limits are. Additionally, it shows the service ceiling of the aircraft. For SAM Mk 1, the maximum and minimum design velocities at sea-level were determined to be 640 kts and 150 kts, respectively. The maximum velocity was determined from the max speed at which the aircraft could structurally fly (max dive speed), which will be discussed further in the Loads Section. The minimum speeds was bounded by the stall speed of the SAM Mk I. Furthermore, the absolute ceiling of SAM Mk I was determined to be 49,700 ft. This shows that SAM Mk I's cruising altitudes are within the minimum and maximum parameters. A visual representation of the flight envelope can be seen in Figure \ref{flyenv}, with the green shade corresponding to the velocity and altitude limits of the aircraft. 
 
 \begin{figure}[!h]
     \centering

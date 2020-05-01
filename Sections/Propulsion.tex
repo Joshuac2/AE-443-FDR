@@ -70,7 +70,7 @@ The engine of choice for the SAM Mk I will be General Electric's GE90-115B. The 
     \label{tab:GE90}
 \end{table}
 
-The unit cost for this engine was approximately \$27.5 million dollars in 2011 \cite{gecost}. When accounting for inflation, the current price is \$31.5 million dollars. Assuming an average rate of inflation of 3\% a year, the estimated cost of this engine once the SAM Mk I goes into service in 2029 will be approximately \$ 47 million dollars. While the initial cost of the GE90-115B is high, since it is in use on aircraft in 2020, it is possible to refurbish a GE90-115B from a retired aircraft, thereby decreasing the initial cost by using a used engine. Additionally, buying engines in bulk for production will decrease the unit cost of each engine.
+The unit cost for this engine was approximately \$27.5 million dollars in 2011 \cite{gecost}. When accounting for inflation, the current price is \$31.5 million dollars. Assuming an average rate of inflation of 3\% a year, the estimated cost of this engine once the SAM Mk I goes into service in 2029 will be approximately \$ 47 million dollars. While the initial cost of the GE90-115B is high, since it is in use on aircraft in 2020, it is possible to refurbish a GE90-115B from a retired aircraft, thereby decreasing the initial cost by using a used engine. Additionally, buying engines in bulk for production will decrease the unit cost of each engine. Additionally, according to Epstein the engine has a propulsive efficiency of approximately 70\% \cite{epstein}.
 
 \begin{figure} [h!]
     \centering
@@ -85,25 +85,25 @@ The GE90-115B has its gearbox located on the underside of the wing where all oth
 
 \subsection{Validation of Engine Choice}
 
-Since the GE90-115B engine is rated to approximately 115,000 lbs of thrust per engine, in case of an engine-out system, the engine would still be able to provide more than 70\% of the estimated required thrust in order to keep the plane in flight. This offers an extra level of safety than if a lesser thrust rated engine was chosen which would not be able to provide such a high percentage of necessary thrust. Furthermore, the GE90-115B has a very strong safety record, with it having a reported in-flight shutdown rate of one per million engine flight hours \cite{geifsd}. 
+Since the GE90-115B engine is rated to approximately 110,000 lbs of thrust per engine, in case of an engine-out failure, the engine would still be able to provide more than 70\% of the estimated required thrust in order to keep the plane in flight. This offers an extra level of safety than if a lesser thrust rated engine was chosen which would not be able to provide such a high percentage of necessary thrust. Furthermore, the GE90-115B has a very strong safety record, with it having a reported in-flight shutdown rate of one per million engine flight hours \cite{geifsd}. 
 
 \begin{figure} [h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{Photos/GE90Trade.PNG}
+    \includegraphics[width=\textwidth]{Photos/GE90Trade.PNG}
     \caption{Engine Trade Study}
     \label{fig:enginetrade}
 \end{figure}
 
 \begin{figure} [h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{Photos/machvssfc.PNG}
+    \includegraphics[width=\textwidth]{Photos/propulsion/mach.png}
     \caption{Mach and SFC vs Altitude of the GE90 - 115B}
     \label{fig:machvssfc}
 \end{figure}
 
 \begin{figure} [h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{Photos/powervsaltitude.PNG}
+    \includegraphics[width=0.8\textwidth]{Photos/propulsion/poweravailable.png}
     \caption{Power Available vs Altitude for the GE90 - 115B}
     \label{fig:poweravailable}
 \end{figure}
@@ -112,7 +112,7 @@ A trade study was conducted which validated the choice of the GE90-115B. Four ma
 
 \subsection{Inlet, Nacelle/Pod Covers and Exhaust Design}
 
-The engines will be located, one of each side, underneath the wings of the aircraft. This is beneficial for a multitude of reasons, however it is primarily helpful in case of an emergency water landing. Due to the high weight of the engines, when the engines are located under the wing, they will be sheared off on impact during an emergency water landing. With the loss of this heavy, and very dense weight, the aircraft now can float for a longer period of time, allowing passengers more time to reach the safety of lifeboats and evacuate. Other engine mountings were not considered due to noise concerns, controllability \ stability in case of engine-out, or due to other safety considerations such as the one mentioned above. Wing mounted engines also have several benefits such as distributing the weight across the wings and the use age of the flaps on the wings can greatly increase lift \cite{raymer}.
+The engines will be located, one of each side, underneath the wings of the aircraft. This is beneficial for a multitude of reasons, however it is primarily helpful in case of an emergency water landing. Due to the high weight of the engines, when the engines are located under the wing, they will be sheared off on impact during an emergency water landing. With the loss of this heavy, and very dense weight, the aircraft now can float for a longer period of time, allowing passengers more time to reach the safety of lifeboats and evacuate. Other engine mountings were not considered due to noise concerns, controllability and stability concerns in case of engine-out, or due to other safety considerations. Wing mounted engines also have several benefits such as distributing the weight across the wings and the useage of the flaps on the wings can greatly increase lift \cite{raymer}.
 
 
 The inlet, nacelle cover, and exhaust design were borrowed heavily from the Boeing 777-200, due to the aircraft's similarity to the SAM Mk I. However, some design considerations were taken from Raymer: namely, the nacelle will be angled down by 3 degrees as recommended by \cite{raymer}. In order to have the most efficient turbofan engine as possible, the air entering the engine must be at a Mach of 0.4-0.5 and therefore needs to be slowed down when in flight. This is done by the geometry of the inlet which causes a pressure less and therefore direct increase in the thrust generated by the engine.  The most simple and straightforward inlet is the pitot inlet which would work very well for the SAM Mk I.
@@ -126,17 +126,15 @@ The inlet, nacelle cover, and exhaust design were borrowed heavily from the Boei
 
 Using equations from Raymer, it is possible to determine the capture area of the inlet, and therefore its diameter \cite{raymer}. Using the cruise Mach number of 0.775, the desired Mach number for the air entering the engine of 0.4, compressible flow relations, and the diameter of the GE90-115B of 128 inches, it was calculated that the inlet diameter should be around 79 inches \cite{ge}.
 
-% diffuser design? I don't wannna. the diffuser should be as
-% short as possible without exceeding an internal angle of about IO deg. Typically, this produces a pitot inlet with a length about equal to its front-face diameter
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Photos/propulsion/enginecad.png}
+    \caption{Engine CAD in Inches}
+    \label{fig:enginecad}
+\end{figure}
 
-\subsection{Future Progress}
+Similarly, it was possible to estimate the exit area of the engine nozzle using estimation parameters from Raymer. Raymer suggests that the required exit area should be 0.5-0.7 times the inlet area \cite{raymer}. When multiplying the capture area of the inlet area and solving for the radius of the nozzle, it calculates a range of 56 - 66 inches. Therefore, the median value of 61 inches was used in order to estimate an approximate diameter of the exit nozzle as 122 inches.
 
-Although the gas turbine engine is the superior choice for this aircraft from intuition and the current progress of electric motors, in the future it would be beneficial to calculate the energy density of batteries and electric motors and compare it to the energy density of a gas turbine engine in order to definitively rule out electric propulsion. Due to the weight and bulk of such systems, no trade study was run, however having quantitative analysis in order to prove the the incapability of such a system for a commercial aircraft.
-
-
-\subsection{Crap to Add}
-
-Validate using CFR using oversized engine. Fix plots
 
 % \textcolor{red}{
 % \begin{itemize}

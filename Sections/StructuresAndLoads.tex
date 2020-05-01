@@ -1,5 +1,6 @@
 \subsection{Structures (\textit{CE})}
 \subsubsection{Material Selection (\textit{CE})}
+\label{section: strcuture material}
 Modern-age aircraft exhibit many different structure layouts and material selection for each structure of the aircraft. The goal for the material selection for each section of the aircraft is to meet the given requirements, as well as provide an aircraft which will have the best mechanical performance for the given flight missions. The different structure types evaluated are tabulated in Table \ref{tab:structure_material_table}.
 
 \begin{table}[!h]
@@ -72,7 +73,7 @@ In Table \ref{tab:material_selection}, the material composition of each structur
                      & Wingbox & \\ \hline
 \multirow{3}{*}{Landing Gear} & Struts & \multirow{3}{*}{Aluminum, Steel, or Titanium Alloys} \\
                      & Axles & \\
-                     & Bulkheads & \\ \hline
+                     & Bulkheads & \\ 
 \bottomrule
 \end{tabular}
 \label{tab:material_selection}
@@ -108,7 +109,7 @@ For analysis, the CFRP material chosen was Hexcel AS4C Uni-Directional 3000 fila
 \multicolumn{1}{|c||}{\textbf{}} & \multicolumn{1}{c|}{} &  
 \multicolumn{1}{c|}{\textbf{Strength (ksi)}} & \multicolumn{1}{c|}{\textbf{Strength (ksi)}} & \multicolumn{1}{c|}{\textbf{(lb/in$^3$)}} \\ \hline \hline
 Aluminum & 2024-T4 & 47 & 68 & 0.1 \\ \hline
-Hexcel Carbon Fiber & ASD4 3000 & N/A & 700 & 0.0647 \\ \hline
+Hexcel Carbon Fiber & ASD4 3000 & N/A & 700 & 0.0647 \\
 \bottomrule
 \end{tabular}
 \label{tab:material_properties}
@@ -118,9 +119,9 @@ Hexcel Carbon Fiber & ASD4 3000 & N/A & 700 & 0.0647 \\ \hline
 \subsubsection{Construction and Layout (\textit{CE})}
 Given the hybrid construction method, the wings and stabilizers require a newer method of construction compared to the traditional metallic construction. Since composite parts are created via a fiber and matrix composition, the stringers can be integrated into the upper and lower panels of the wings and stabilizers via adhesion. This alone saves incredible costs and weight by eliminating the use of fasteners in high-load locations. The absence of fasteners increases the damage tolerance and fatigue rating of the structure as well.
 
-Spars are the most important structure to the wings, and arguably the most important on the entire aircraft. These few parts make the entire aircraft fly, and in the process, see a lot of loading cycles over the life of the aircraft. In metal structures, loading cycles cause fatiguing, and then fatigue cracking, which degrades the structure. Traditionally, metallic structures use a 3-piece build-up for the spar: chord on the top and bottom, and a web connecting the two chords. This structure ends-up looking like a C-channel extrusion. The reason the spars are a 3-piece build-up comes down to crack growth and fatigue. A crack starts in the lower chord, but cannot grow through the entire spar since the chord is connected to the web by fasteners. There are a few aircraft that have used a one-piece, or monolithic, metallic spar, some being the Boeing 1-B and the Airbus 320 NEO. There is significant research in learning crack-growth patterns and predicting where cracks will start and grow; opening-up huge possibilities in reducing manufacturing costs by allowing optimized metallic spars to be utilized on low-cost aircraft.
+Spars are the most important structure to the wings, and arguably the most important on the entire aircraft. These few parts make the entire aircraft fly, and in the process, see a lot of loading cycles over the life of the aircraft. In metal structures, loading cycles cause fatiguing, and then fatigue cracking, which degrades the structure. Traditionally, metallic structures use a three-piece build-up for the spar: chord on the top and bottom, and a web connecting the two chords. This structure ends-up looking like a C-channel extrusion. The reason the spars are a three-piece build-up comes down to crack growth and fatigue. A crack starts in the lower chord, but cannot grow through the entire spar since the chord is connected to the web by fasteners. There are a few aircraft that have used a one-piece, or monolithic, metallic spar, some being the Boeing 1-B and the Airbus 320 NEO. There is significant research in learning crack-growth patterns and predicting where cracks will start and grow; opening-up huge possibilities in reducing manufacturing costs by allowing optimized metallic spars to be utilized on low-cost aircraft.
 
-The spars are where composites differ greatly from traditional 3-piece spar construction. Since composite structures do not crack like metal structures when fatigued, a monolithic spar can be utilized. This spar construction reduces costs, but increases the weight due to a thicker layup compared to a simpler 3-piece construction. Due to the considerable cost savings, a monolithic composite spar was modelled, seen in Figs. \ref{fig:spar_layout} and \ref{fig:spar_layout_tip}.
+The spars are where composites differ greatly from traditional three-piece spar construction. Since composite structures do not crack like metal structures when fatigued, a monolithic spar can be utilized. This spar construction reduces costs, but increases the weight due to a thicker layup compared to a simpler three-piece construction. Due to the considerable cost savings, a monolithic composite spar was modelled, seen in Figs. \ref{fig:spar_layout} and \ref{fig:spar_layout_tip}.
 
 \begin{figure}[!h]
     \centering
@@ -135,11 +136,11 @@ The spars are where composites differ greatly from traditional 3-piece spar cons
     \label{fig:spar_layout_tip}
 \end{figure}
 
-Ribs in the wings are traditionally multi-piece substructures comprised of machined aluminum parts. The benefit to using aluminum ribs in the wing comes from the fact that composites are difficult to utilize on very complex and dramatic geometry. However, due to manufacturing costs, a multi-piece composite rib was chosen over a monolithic aluminum rib. In an effort to save more cost and manufacturing troubles, a monolithic rib structure, with the rib posts, chords, webs, and pads formed in a single composite part, can be investigated at a later date. Ribs in the stabilizers are typically not as complex as a rib in the wings due to the lower-loaded and smaller structure. In the stabilizers, composite ribs may be utilized for weight savings. The current rib spacing on the wing is 30 inches, which is a derivative of the approximation given by Raymer with a slight adjustment for composite composition. This spacing results in 33 ribs in each wing. 
+Ribs in the wings are traditionally multi-piece substructures comprised of machined aluminum parts. The benefit to using aluminum ribs in the wing comes from the fact that composites are difficult to utilize on very complex and dramatic geometry. However, due to manufacturing costs, a multi-piece composite rib was chosen over a monolithic aluminum rib. In an effort to save more cost and manufacturing troubles, a monolithic rib structure, with the rib posts, chords, webs, and pads formed in a single composite part, can be investigated at a later date. Ribs in the stabilizers are typically not as complex as a rib in the wings due to the lower-loaded and smaller structure. In the stabilizers, composite ribs may be utilized for weight savings. The current rib spacing on the wing is 30 inches, which is a derivative of the approximation given by Raymer with a slight adjustment for composite composition \cite{raymer}. This spacing results in 34 ribs in each wing. 
 
 Since the fuselage is a metallic structure, a common layout of frames, stringers, and floor joists can be utilized. The floor joists may be a composite part, as the joists are not primary structure, and the connection method to the frames of the fuselage is by brackets and fasteners. Frames in the business class are spaced with the same distance of the business class seat pitch of 36 inches, and the economy frames are spaced the same distance of the economy seat pitch of 32 inches. The seat pitches are defined in Section \ref{section: internal config}. The frames and longerons are spaced such that no windows or exit doors are covered or physically blocked, where W-shaped longerons are spaced at 10 inches intervals along the fuselage circumference. Several frames will be considered "floating", or not connected to the skin of the fuselage, and others being traditional frames. The floating frames are only mounted to the longerons, rather than the actual skin of the fuselage. Floating frames increase fatigue life, as fewer holes are introduced into the fuselage skin. It will also need to be noted that full frames cannot be present where emergency exit doors and windows exist.
 
-In Fig. \ref{fig:structure_cutaway}, the aircraft structure can be seen. It should be noticed that no windows or doors are covered by frames or stringers in the fuselage. Also note that at this time, the nose ribs have not been modelled, as their current spacing and size is not fully defined at this time.
+In Fig. \ref{fig:structure_cutaway}, the aircraft structure can be seen. It should be noticed that no windows or doors are covered by frames or stringers in the fuselage. Also note that at this time, the nose ribs have not been modelled, as their current spacing and size is not fully defined for the purposes of this proposal.
 
 \begin{figure}[!h]
     \centering
@@ -164,12 +165,13 @@ Given that the aircraft is a wide-body, large wingspan structure, a bolt-on meth
 \end{figure}
 \FloatBarrier
 
-It can also be seen in Fig. \ref{fig:wing_structure} that the first 4 inboard ribs of the wing are parallel to the stream-wise direction, with the rest of the outboard ribs being perpendicular to the front spar. This is done to simplify assembly and strength at the root of the wing where the wing attaches to the wingbox. If all of the ribs were perpendicular to the front spar, the first inboard ribs would terminate along the wingbox, complicating the structure.
+It can also be seen in Fig. \ref{fig:wing_structure} that the first 3 inboard ribs of the wing are parallel to the stream-wise direction, with the rest of the outboard ribs being perpendicular to the front spar. This is done to simplify assembly and strength at the root of the wing where the wing attaches to the wingbox. If all of the ribs were perpendicular to the front spar, the first inboard ribs would terminate along the wingbox, complicating the structure.
+\clearpage
 
 \subsection{Loads (\textit{MK})}
 \subsubsection{V-N Diagram}
 \label{subvn}
-One important aspect in the structural analysis of the aircraft is determining the limits in the performance of the aircraft. This is done using a V-N diagram, as shown in Figure \ref{figVN}. This diagram incorporates parameters such as wing loading and performance velocities (maneuvering, cruise, and dive velocities) along with limit loading factors. Maximum positive and negative limit loading factors of 2.50 and -1.0 were chosen, respectively, according to the regulations set forth in FAA 14 CFR Part 25.337 \cite{cfr}, Limit Maneuvering Load Factors. Additionally, gust loads were added according to CFR Part 25.341 \cite{cfr}. The gust load lines were further calculated using a safety factor of 1.5, as specified in FAA 14 CFR Part 25.303, Factor of Safety \cite{cfr}. Note that the velocities displayed in the diagram (Figure \ref{figVN}) units displayed as equivalent velocities (KEAS). This V-N diagram was created assuming sea-level conditions. 
+One important aspect in the structural analysis of the aircraft is determining the limits in the performance of the aircraft. This is done using a V-N diagram, as shown in Figure \ref{figVN}. This diagram incorporates parameters such as wing loading and performance velocities (maneuvering, cruise, and dive velocities) along with limit loading factors. Maximum positive and negative limit loading factors of 2.50 and -1.0 were chosen, respectively, according to the regulations set forth in FAA 14 CFR Part \S 25.337 \cite{cfr}, Limit Maneuvering Load Factors. Additionally, gust loads were added according to FAA CFR Part \S 25.341 \cite{cfr}. The gust load lines were further calculated using a safety factor of 1.5, as specified in FAA 14 CFR Part \S 25.303, Factor of Safety \cite{cfr}. Note that the velocities displayed in the diagram (Figure \ref{figVN}) units displayed as equivalent velocities (KEAS). This V-N diagram was created assuming sea-level conditions. 
 
 \begin{figure}[H]
     \centering
@@ -178,7 +180,7 @@ One important aspect in the structural analysis of the aircraft is determining t
     \label{figVN}
 \end{figure}
 
-As seen from Figure \ref{figVN}, gust loads do not limit the performance of the SAM Mk I. Moreover, using equations from Roskam \cite{roskam_5}, design maneuvering speed ($V_{A}$), cruising speed ($V_{C}$) and design diving speed ($V_{D}$) were estimated to be 220 kts, 440 kts. and 620 kts, respectively. Furthermore, the calculation of the positive and negative stall lines involved the use of equations from Roskam \cite{roskam_5}. At sea-level and at a limit loading factor of 1 and -1, the stall speeds were calculated to be 140 kts and 160 kts, respectively.
+As seen from Figure \ref{figVN}, gust loads do not limit the performance of the SAM Mk I. Moreover, using equations from Roskam \cite{roskam_5}, design maneuvering speed ($V_{A}$), cruising speed ($V_{C}$) and design diving speed ($V_{D}$) were estimated to be 220 kts, 440 kts, and 620 kts, respectively. Furthermore, the calculation of the positive and negative stall lines involved the use of equations from Roskam \cite{roskam_5}. At sea-level and at a limit loading factor of 1 and -1, the stall speeds were calculated to be 140 kts and 160 kts, respectively.
 
 \subsubsection{Wing Loading}
 \label{winlod}
@@ -221,7 +223,7 @@ As the wing is experiencing aerodynamic loads, those loads are transferred onto 
 \end{figure}
 
 \newpage
-Furthermore, the aircraft will experience pressurization loads during cruise flight. Accoriding to the RFP \cite{RFP}, the aircraft will need to be pressurized to 8,000 ft pressure altitude above that altitude. Thus, there will be a pressure differential, specifically a max differential at the point where the aircraft is at its highest altitude. Since SAM Mk I will be starting at a cruise altitude of 37,000 and end at 41,000 ft, the last altitude height will carry the highest pressure differential in the aircraft. The fuselage will feel this differential as displayed in the load path diagram in Figure \ref{loadpath}.
+Furthermore, the aircraft will experience pressurization loads during cruise flight. According to the RFP \cite{RFP}, the aircraft will need to be pressurized to 8,000 ft pressure altitude above that altitude. Thus, there will be a pressure differential, specifically a max differential at the point where the aircraft is at its highest altitude. Since SAM Mk I will be starting at a cruise altitude of 37,000 and end at 41,000 ft, the last altitude height will carry the highest pressure differential in the aircraft. The fuselage will feel this differential as displayed in the load path diagram in Figure \ref{loadpath}.
 Table \ref{tab:pres} displays the pressures the aircraft will be pressurized to, the pressure at 41,000 ft altitude, and the differential between both those values. 
 
 \begin{table}[!h]
@@ -323,6 +325,22 @@ Given the main configuration stated above, the landing gear was sized such that 
     \caption{SAM Mk I Landing Gear Maximum Takeoff Angle}
     \label{fig:gear_angle}
 \end{figure}
+\FloatBarrier
+The main and nose landing gear bogeys can be seen in Figs. \ref{fig:main_gear} and \ref{fig:nose_gear} respectively. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.5\linewidth]{Photos/landinggear/Main Gear ISO.PNG}
+  \captionof{figure}{Main Gear Bogey}
+  \label{fig:main_gear}
+\end{figure}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.4\linewidth]{Photos/landinggear/Nose Gear ISO.PNG}
+  \captionof{figure}{Nose Gear Bogey}
+  \label{fig:nose_gear}
+\end{figure}
+\FloatBarrier
 
 \subsubsection{Kinematics}
 The landing gear is designed in such a way which allows seamless stowage into the belly of the aircraft. In Figs. \ref{fig:main_landing_kin} and \ref{fig:nose_landing_kin}, the kinematics of the main and nose landing gear are shown. As seen, both the main and nose landing gear stow into the aircraft without interference. The main landing gear stow behind the wingbox to eliminate interference issues.
