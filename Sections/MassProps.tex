@@ -1,10 +1,10 @@
 \subsection{Comparison Analysis}
 \label{subsection: comparison}
-Given the preliminary geometry of the aircraft, the mass properties of the aircraft's sections were calculated and tabulated in Table \ref{tab:mass_props}. Equations used and analyzed came from Raymer \cite{raymer} and Roskam Part V \cite{roskam_5}, class II analysis for traditional construction of aircraft. To account for SAM's use of composites in the wing, horizontal and vertical stabilizers, a correction factor of .8*, the weight savings quoted by Boeing Commercial Aircraft for hybrid aircraft, was applied to estimations for the aircraft's lifting surfaces \cite{bcacomposite}.  Finally, an actual weight was chosen by either an average or closest value to the estimated weight from the seed aircraft (777-200) given the seed inputs.
+Given the preliminary geometry of the aircraft, the mass properties of the aircraft's sections were calculated and tabulated in Table \ref{tab:mass_props}. Equations used and analyzed came from Raymer \cite{raymer} and Roskam Part V \cite{roskam_5}, class II analysis for traditional construction of aircraft. To account for the use of composites in the wing, horizontal and vertical stabilizers, a correction factor of 0.8* was applied, the weight savings quoted by Boeing Commercial Aircraft for composite aircraft structure over aluminum structure, was applied to estimations for the aircraft's lifting surfaces \cite{bcacomposite}.  Finally, an actual weight was chosen by either an average or closest value to the estimated weight from the seed aircraft (777-200) given the seed inputs.
 
 \begin{table}[!h]
 \centering
-\caption{Independent Mass Estimations of SAM Mk. 1}
+\caption{Independent Mass Estimations of SAM Mk I}
 \begin{tabular}{|c||c|c|c|c| }
 \toprule
 \multicolumn{1}{|c||}{\textbf{Description}} & \multicolumn{1}{c|}{\textbf{Raymer Weight}} &  
@@ -19,7 +19,8 @@ Fixed Equipment & 55,000 & 65,000 & 60,000 & Roskam V Pgs. 97-111 \cite{roskam_5
 & & & & \& Raymer Pgs. 575-576 \cite{raymer} \\ \hline
 Engine Weight (per) &  \multicolumn{4}{|c|}{19,316}   \\ \hline
 Baggage Weight & \multicolumn{4}{|c|}{12,300 (30 lb/occupant) }  \\ \hline
-Payload Weight & \multicolumn{4}{|c|}{82,000 (200 lb/occupant) }  \\ \hline \hline
+Payload Weight & \multicolumn{4}{|c|}{82,000 (200 lb/occupant) }  \\ \hline
+Fuel Weight & \multicolumn{4}{|c|}{146,860, (6.1 lb/gal) }  \\ \hline \hline
 \textbf{Empty Weight} & 160,326 & 217,371 & \textbf{216,200} & -\\ \hline
 \textbf{MTOW} & 364,626 & 421,671 & \textbf{443,800}  & - \\ \hline
 \textbf{MZFW} & 242,326 & 299,371 & \textbf{310,500}  & - \\ \hline
@@ -111,10 +112,12 @@ When determining the stability of the aircraft, an envelope which contains the l
 \end{figure}
 
 It can be noticed that the envelope spans from 5\% to 42\% MAC, which is in the range of the stability of the aircraft given the location of the landing gear, seen in Section \ref{section: Landing Gear}.
-
+\newpage %may be able to delete as the document grows.  Here to put E future work beloew cg envelope pictures
 \subsection{Future Work}
-Future work may include using the CAD model to estimate the CG, moments of inertia, and overall mass of the aircraft once all sizing and material assignment is completed.
+Future work may include using the CAD model to estimate the CG, moments of inertia, and overall mass of the aircraft once all sizing and material assignment is completed. \hl{hide or delete, state CAD CG, I, etc etc}
 
+
+\clearpage
 % \textcolor{red}{
 % \begin{itemize}
 % \item Discuss any analysis supporting the sizing analysis.

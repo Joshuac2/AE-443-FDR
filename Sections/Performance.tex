@@ -7,7 +7,7 @@ The AIAA RFP \cite{RFP} requires this short range aircraft to have a range of 3,
 
 % In the future, the flight envelope as well as fuel estimation of each segment in the mission profile will be performed. Additionally, the time-step integration of cruise will be refined and the time-step integration process will be implemented for the climb, descend, and loiter segments of the mission. Further analysis will performed on determining the drag of each mission segment as well as regulating that the design stays within the requirements set forth by the RFP \cite{RFP}. obsolete now
 
-\subsection{Determination of Cruising Altitude (\textbf{MK})}
+\subsection{Determination of Cruising Altitude (\textit{MK})}
 To determine a valid cruising altitude, a trade study was performed on the two-class capacity of similiar aircraft that either are currently in service or were in the past. This will facilitate the decision of which altitude will be best to cruise at for SAM Mk. 1. Figure \ref{cruxalt} shows four aircraft and their respective cruising altitudes and two-class passenger capacity\cite{butterworth}.
 
 \begin{table}[!h]
@@ -128,18 +128,18 @@ An important parameter to determine for SAM Mk I is how much fuel is required fo
     \textbf{Mission Segment} & \textbf{Fuel Weight [lb]} & \textbf{Calculated Fuel Fraction}\\ \hline \hline
     WUTTO & 6,750 & 0.985 \\ \hline
     Climb & 8,060 & 0.982  \\ \hline
-    Cruise & 95,950 & 0.787 \\ \hline
+    Cruise & 95,950 & 0.786 \\ \hline
     Descend & 6,420 & 0.986 \\ \hline
     ALT & 1,660 & 0.996 \\ \hline
-    5 min Loiter (5,000 ft) & 910 & 0.998\\ \hline
+    5 min Loiter (5,000 ft) & 910 & 0.997 \\ \hline
     Climb to 30,000 ft & 4,430 & 0.990 \\
     \hline
     200 NM Alternate & 2,090 & 0.995 \\ \hline
     30 min Loiter & 7,370 & 0.984 \\ \hline
-    Descend & 5,160 & 0.989 \\ \hline
+    Descend & 5,160 & 0.988 \\ \hline
     5\% Contingency Fuel & 5,990 & 0.987 \\ \hline
     5 min Loiter (5,000 ft) & 1,240 & 0.997 \\ \hline
-    \textbf{Total Fuel} & \textbf{146,860} & --- \\
+    \textbf{Total} & \textbf{146,860} & \textbf{0.679} \\
     \bottomrule
     \end{tabular}
     \label{fuelfrac}
@@ -169,7 +169,7 @@ The payload-range diagram is used to analyze the range of the aircraft as payloa
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{Photos/Payload_Range.pdf}
-    \caption{Payload-Range Diagram -  SAM Mk. 1}
+    \caption{Payload-Range Diagram -  SAM Mk. I}
     \label{payrang}
  \end{figure}
 
@@ -180,7 +180,7 @@ The flight envelope is an important diagram that demonstrates the capability of 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=1.0\textwidth]{Photos/Flight_Envelope.pdf}
-    \caption{Flight Envelope (shaded) -  SAM Mk. 1}
+    \caption{Flight Envelope (shaded) -  SAM Mk. I}
     \label{flyenv}
  \end{figure}
 \clearpage

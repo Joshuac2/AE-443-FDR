@@ -15,32 +15,62 @@
         Chord Tip & 92.76 & 113.60 & in \\ \hline   
         Mean Aerodynamic Chord & 192.71 & 236.02 & in \\ \bottomrule
     \end{tabular}
-    \label{tab:wingsizing}
+    \label{tab:stabsizing}
 \end{table}
 
-Both the horizontal stabilizer \hl{edit out early stages etc} and vertical stabilizer are at very early stages in sizing.  Location of the stabilizers, as notated as the distance between the $\text{MAC}_{\text{wing}}$ and $\text{MAC}_{\text{stabilizers}}$, is likely to change after further stability analysis.
+Both the horizontal and vertical stabilizer are initially sized per Raymer's recommended 25\% and 12.5\% of $S_{wing}$.\cite{raymer}  Location of the stabilizers, as notated as the distance between the $\text{MAC}_{\text{wing}}$ and $\text{MAC}_{\text{stabilizers}}$.
 
 \subsubsection{Horizontal Stabilizer}
 SAM Mk I uses a standard tail configuration.  The horizontal stabilizer is initially sized to be 25\% of $S_{wing}$.  This provides a starting point from which to begin stability analysis.  Use of an inverted NASA SC(2)-0412 airfoil for the horizontal stabilizer is proposed to provide a counter moment to the lifting effects of the wing.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.75\textwidth]{Photos/stab/htail.png}
+    \includegraphics[width=0.75\textwidth]{Photos/stab/htail.jpg}
     \caption{Horizontal Stabilizer Top View}
     \label{fig:htailstab}
 \end{figure}
 
 \subsubsection{Vertical Stabilizer}
-The vertical stabilizer is sized to be approximately 12.5\% of $S_{wing}$.  Additional attention must be directed at the vertical stabilizer to ensure directional stability.
+The vertical stabilizer is sized to be approximately 12.5\% of $S_{wing}$.  Additional attention must be directed at the vertical stabilizer to ensure directional stability.  A symmetrical airfoil is desired for the vertical stabilizer to improve the directional stability by counteracting any yaw-moments.  Due to its thin profile and symmetrical form factor, the NACA 0012 is selected for the vertical tail.  Yaw-directional trim tabs are located on the aft 5\% chordwise trailing edge of the vertical tail to provide a trim factor.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{Photos/stab/vtail.jpg}
+    \caption{Vertical Stabilizer Side View}
+    \label{fig:vtailstab}
+\end{figure}
 
 \subsection{Control Surfaces}
-Several control surfaces are built into the wing, horizontal stabilizer, and vertical stabilizer.  The main wing contains a flap mechanism from spanwise locations $11.5$ ft to $69.1$ ft and deflects a maximum of $\delta_F = 30\degree$.  An initial aileron sizing has determined potential placement from $72$ ft to $90$ ft.  The aileron deflection angle range has yet to be sized and will depend on performance decision for roll speed.  A trade study is currently underway to determine whether SAM Mk I should lock ailerons and implement flaperons for the transonic cruise stage.  The rudder is located on the vertical tail and spans the entire length of the tail, $27$ ft, as is normal in comparable aircraft.  The elevators are located on the horizontal stabilizer and spans from $2$ ft to $65$ ft.  Yet another trade study is taking place to determine the selection of trim tabs or a trimmable horizontal stabilizer.
+Several control surfaces are built into the wing, horizontal stabilizer, and vertical stabilizer.  The main wing contains a flap mechanism from spanwise locations $11.5$ ft to $69.1$ ft and deflects a maximum of $\delta_F = 30\degree$.  An initial aileron sizing has determined potential placement from $72$ ft to $90$ ft and has a deflection angle of $\pm 15\degree$.  During cruise, the ailerons lock into $\delta_f = 0\degree$ and outboard flap mechanism unlocks and deploys as a flaperon system to mitigate controllability issues at transonic cruise stage.  A trade study was conducted to determine whether SAM Mk I should lock ailerons and implement flaperons for the transonic cruise stage and it was determined to be more efficient to use flaperon systems at higher speeds and ailerons at slower speeds.  The rudder is located on the vertical tail and spans the entire length of the tail, $27$ ft, as is normal in comparable aircraft.  The maximum deflection angle of the rudder is $\pm 15\degree$.  The elevators are located on the horizontal stabilizer and spans from $2$ ft to $65$ ft.  Yet another trade study is taking place to determine the selection of trim tabs or a trimmable horizontal stabilizer.
 
+\subsection{Modeling and Simulation}
+A combination of OpenVSP and Athena Vortex Lattice software is used to model SAM Mk I.  The OpenVSP model (Figure \ref{fig:simA}) provided a stepping stone in visualizing a preform of the aircraft during preliminary design stages.  OpenVSP was soon combined with AVL (Figure \ref{fig:simB}) to provide another blackbox procedure to simulating the controlability matrix. 
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}{0.85\textwidth}
+        \centering
+        \includegraphics[width=0.85\textwidth]{Photos/stab/openvsp.png}
+        \caption{OpenVSP Model}
+        \label{fig:simA}
+    \end{subfigure}
+    \begin{subfigure}{0.85\textwidth}
+        \centering
+        \includegraphics[width=0.85\textwidth]{Photos/stab/avl.png}
+        \caption{AVL Simulation}
+        \label{fig:simB}
+    \end{subfigure}
+    \caption{Stability Simulations}
+    \label{fig:sim}
+\end{figure}
 \clearpage
+
+\subsection{Stability Control Derivatives}
+
+
 % \subsection{Pitch Trim Control}
 
 % \subsection{Longitudinal Static Stability}
 
-% \subsection{Stability Control Derivatives}
 
 
 % \subsubsection{$C_{L,\alpha}$}
@@ -53,25 +83,7 @@ Several control surfaces are built into the wing, horizontal stabilizer, and ver
 
 % \textcolor{red}{
 % \begin{itemize}
-%     \item Discuss rationale for stabilizer configuration (if not done in Configuration section).
-%     \item Provide reasoning and methodologies for sizing of all stabilizers, with relevant sources.
-%     \begin{itemize}
 %         \item Notch/scissor diagram (not required for PDR but will be for FDR)
-%         \item Discuss airfoil selection with reasoning (e.g. symmetry).
-%         \item Include explicit values for both horizontal and vertical stabilizers: span, root chord, tip chord, (quarter chord) sweep, area, (leading edge) location, volume coefficient
-%         \item Provide scaled visual representations of all stabilizers (top-down view for horizontal, side view for vertical).
-%         \begin{itemize}
-%             \item The following parameters should be shown within the diagrams: span, root chord, tip chord, and sweep.
-%         \end{itemize}
-%     \end{itemize}
-%     \item Provide reasoning and methodologies for sizing of all control surface, with relevant sources.
-%     \begin{itemize}
-%         \item Include explicit values for all control surfaces (e.g. elevator, ailerons, rudder, and flaps): chord ratios and lengths, span ratios and lengths, and deflection range (min/max).
-%         \item Provide scaled visual representations of all control surfaces (can use SAM e diagrams as those for stabilizers).
-%         \begin{itemize}
-%             \item The following parameters should be shown within the diagrams: span, root chord, and tip chord.
-%         \end{itemize}
-%     \end{itemize}
 %     \item Include incidence values for both the wing and horizontal stabilizer, with reasoning.
 %     \item Provide trim diagrams with established trim points and elevator/stabilizer deflections.
 %     \begin{itemize}
